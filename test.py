@@ -35,9 +35,6 @@ button = driver.find_element_by_xpath("//button[@class='artdeco-button artdeco-b
 
 button.click()
 
-# identifying the link with the help of link text locator
-#driver.find_element_by_link_text("Company").click()
-
 sleep(10)
 
 driver.close()
