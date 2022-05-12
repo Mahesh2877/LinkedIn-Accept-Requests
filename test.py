@@ -6,8 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from getpass import getpass
 from selenium.webdriver import ActionChains
 
-# USERNAME = input("Enter the username: ")
-USERNAME = "swayammahesh@yahoo.in"
+USERNAME = input("Enter the username: ")
 PASSWORD = getpass("Enter the password: ")
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
@@ -31,7 +30,9 @@ print("Openned network lists!!!!")
 #to refresh the browser
 #driver.refresh()
 sleep(5)
-button = driver.find_element_by_link_text('Accept')
+
+button = driver.find_element_by_xpath("//button[@class='artdeco-button artdeco-button--2 artdeco-button--secondary ember-view invitation-card__action-btn']")
+
 button.click()
 
 # identifying the link with the help of link text locator
