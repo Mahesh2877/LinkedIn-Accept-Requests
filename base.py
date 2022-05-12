@@ -22,10 +22,12 @@ driver.get('https://www.linkedin.com/mynetwork/invitation-manager/')
 driver.maximize_window()
 
 #Click on "Sign In"
+sleep(3)
 sign_in_link = driver.find_element_by_class_name("main__sign-in-link")
 sign_in_link.click()
 
 # Enter the login credentials and hit ENTER
+sleep(3)
 email=driver.find_element_by_id("username")
 email.send_keys(USERNAME)
 
@@ -44,7 +46,7 @@ people_button.click()
 # Use xpath to find the list of Accept buttons to Click
 # The syntax in this line basically says to look for the <button> tag first...
 # ...then find the "class" attribute having the exact same value as given here
-sleep(5)
+sleep(10)
 accept_buttons = driver.find_elements_by_xpath("//button[@class='artdeco-button artdeco-button--2 artdeco-button--secondary ember-view invitation-card__action-btn']")
 # Iterate through the list of buttons and start CLICKING 'EM!!!'
 for individual_button in accept_buttons:
